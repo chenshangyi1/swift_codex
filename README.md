@@ -18,7 +18,7 @@
 ## 安装
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/chenshangyi1/swift_codex
 cd codex-local-account-switcher
 npm install
 ```
