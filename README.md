@@ -19,7 +19,7 @@
 
 ```bash
 git clone https://github.com/chenshangyi1/swift_codex
-cd codex-local-account-switcher
+cd swift_codex
 npm install
 ```
 
