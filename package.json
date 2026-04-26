@@ -1,0 +1,28 @@
+{
+  "name": "codex-local-account-switcher",
+  "version": "0.1.0",
+  "description": "Local OpenAI Codex CLI auth.json snapshot switcher.",
+  "main": "dist-electron/main/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^1.9.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^41.3.0",
+    "electron-vite": "^5.0.0",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.2"
+  }
+}

@@ -1,0 +1,42 @@
+node_modules/
+dist/
+dist-electron/
+release/
+out/
+build/
+.vite/
+coverage/
+
+# Local secrets and runtime state
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Never commit real Codex auth snapshots or local caches.
+.codex/
+auth.json
+accounts/
+backups/
+app-session-backups/
+usage-cache.json
+*.auth.json
+*auth*.json
+*token*.json
+*cookie*.json
+
+# Generated or unrelated local artifacts
+presentation-neon-energy-grid/
+
+# OS / editor
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea/
+.vscode/
+*.swp
+*.swo
