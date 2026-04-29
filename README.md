@@ -18,7 +18,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/chenshangyi1/swift_codex
+git clone https://github.com/chenshangyi1/swift_codex.git
 cd swift_codex
 npm install
 ```

@@ -87,6 +87,10 @@ export function App(): ReactElement {
   const refresh = async (quiet = false): Promise<void> => {
     setBusy(true);
     try {
+      if (!window.codexAccounts) {
+        throw new Error('主进程桥接未加载，请重新启动应用。');
+      }
+
       const [statusResult, accountsResult] = await Promise.all([
         window.codexAccounts.getCodexStatus(),
         window.codexAccounts.listAccounts()
@@ -110,6 +114,8 @@ export function App(): ReactElement {
       if (!quiet) {
         pushLog('info', '已刷新本地 Codex 状态。');
       }
+    } catch (error) {
+      pushLog('error', error instanceof Error ? error.message : '刷新本地 Codex 状态失败。');
     } finally {
       setBusy(false);
     }
@@ -276,7 +282,7 @@ export function App(): ReactElement {
             <div className="card-heading">
               <div>
                 <p className="eyebrow">当前 Codex 状态</p>
-                <h3>{status?.hasAuth ? '已发现 auth.json' : '未发现 auth.json'}</h3>
+                <h3>{status ? (status.hasAuth ? '已发现 auth.json' : '未发现 auth.json') : '尚未读取 Codex 状态'}</h3>
               </div>
               {status?.hasAuth ? <CheckCircle2 className="ok" size={26} /> : <XCircle className="bad" size={26} />}
             </div>
